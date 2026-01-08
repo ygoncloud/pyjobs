@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post">
+<div class="mb-3">
+<label for="company" class="form-label">Company</label>
+<input type="text" class="form-control" id="company" name="company" required>
+</div>
+<div class="mb-3">
+<label for="job_title" class="form-label">Job Title</label>
+<input type="text" class="form-control" id="job_title" name="job_title" required>
+</div>
+<div class="mb-3">
+<label for="status" class="form-label">Status</label>
+<select class="form-select" id="status" name="status" required>
+<option value="Applied">Applied</option>
+<option value="Interviewing">Interviewing</option>
+<option value="Offer">Offer</option>
+<option value="Rejected">Rejected</option>
+<option value="Accepted">Accepted</option>
+</select>
+</div>
+<div class="mb-3">
+<label for="application_link" class="form-label">Application Link</label>
+<input type="url" class="form-control" id="application_link" name="application_link">
+</div>
+<div class="mb-3">
+<label for="date_applied" class="form-label">Date Applied</label>
+<input type="date" class="form-control" id="date_applied" name="date_applied" required>
+</div>
+<div class="mb-3">
+<label for="location" class="form-label">Location</label>
+<input type="text" class="form-control" id="location" name="location">
+</div>
+<div class="mb-3">
+<label for="source" class="form-label">Source</label>
+<input type="text" class="form-control" id="source" name="source">
+</div>
+<div class="mb-3">
+<label for="notes" class="form-label">Notes</label>
+<textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+</div>
+<button type="submit" class="btn btn-success">Add Application</button>
+</form>
+{% endblock %}
